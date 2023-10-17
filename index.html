@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lego</title>
+    <style>
+        body {
+            background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        button{
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid gold;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        button a {
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+      .container {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: white;
+          border-radius: 10px;
+          padding: 20px;
+      }
+
+      .theme-button {
+        background-color: black;
+        color: white;
+      }
+
+      .theme-button:hover {
+        background-color: white;
+        color: black;
+
+      }
+
+      button:hover {
+        background-color: gold;
+        cursor: pointer;
+      }
+
+      .image1 {
+         transition: all 150ms ease-in-out;
+      }
+
+      .image1:hover {
+        transform: scale(1.1);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px;
+      }
+
+      .grid img {
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.1);
+      }
+
+      .dark {
+        background: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Lego</h1>
+      <h2>My favorite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Lego" target="_blank">
+        <img
+          class="image1"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/634/original/meg-jenson-x4dkU4wKevg-unsplash.jpg?1697338880"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/810/original/james-a-molnar-jMDtJtFs8EQ-unsplash.jpg?1697427782"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/817/original/sebastien-bonneval-e9At6kxmGfk-unsplash.jpg?1697434947"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/804/original/starks-don-pablo-jJTVxkSeHMM-unsplash.jpg?1697426655"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/803/original/jonny-gios-1duJxPC0WFk-unsplash.jpg?1697426629"
+        />
+      </div>
+      <p>
+        Lego is a line of plastic construction toys that are manufactured by the
+        Lego Group, a privately held company based in Billund, Denmark. Lego
+        consists of variously colored interlocking plastic bricks made of
+        acrylonitrile butadiene styrene that accompany an array of gears,
+        figurines called minifigures, and various other parts. Lego pieces can
+        be assembled and connected in many ways to construct objects, including
+        vehicles, buildings, and working robots. Anything constructed can be
+        taken apart again, and the pieces reused to make new things. The Lego
+        Group began manufacturing the interlocking toy bricks in 1949. Films,
+        games competitions, and eight Legoland amusement parks have been
+        developed under the brand. As of July 2015, 600 billion Lego parts had
+        been produced.
+      </p>
+
+      <button>
+        <a href="https://en.wikipedia.org/wiki/Lego" target="_blank"
+          >Read on wikipedia</a
+        >
+      </button>
+    </div>
+    <footer>Coded by Yejin Kim with HTML, CSS, and JavaScript</footer>
+
+    <script>
+        function darkTheme() {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            }
+            else {
+                body.classList.add("dark");
+            }
+        }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", darkTheme);
+    </script>
+  </body>
+</html>
